@@ -1,12 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter</title>
-</head>
-<body>
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Currency Converter</h1>
+      <p class="subtitle">Convert your amount to any currency</p>
+
+      <div class="amountBox">
+        <label for="amount">Amount</label>
+
+        <div class="inputWrapper">
+          <span>$</span>
+          <input type="number" id="amount" placeholder="Enter amount" />
+        </div>
+      </div>
+
+      <div class="currencyContainer">
+        <div class="currencyBox">
+          <label for="fromCurrency">From</label>
+
+          <select id="fromCurrency">
+            <option value="USD" selected>🇺🇸 USD - US Dollar</option>
+            <option value="INR">🇮🇳 INR - Indian Rupee</option>
+            <option value="EUR">🇪🇺 EUR - Euro</option>
+            <option value="GBP">🇬🇧 GBP - British Pound</option>
+            <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+          </select>
+        </div>
+
+        <button class="swapBtn">
+          <i class="ri-arrow-left-right-line"></i>
+        </button>
+
+        <div class="currencyBox">
+          <label for="toCurrency">To</label>
+
+          <select id="toCurrency">
+            <option value="INR" selected>🇮🇳 INR - Indian Rupee</option>
+            <option value="USD">🇺🇸 USD - US Dollar</option>
+            <option value="EUR">🇪🇺 EUR - Euro</option>
+            <option value="GBP">🇬🇧 GBP - British Pound</option>
+            <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="convertBtn">
+        <i class="ri-exchange-dollar-line"></i>
+        Convert
+      </button>
+
+      <div class="resultContainer">
+        <p class="resultTitle">Converted Amount</p>
+
+        <h2 class="resultAmount">₹0.00</h2>
+
+        <span class="exchangeRate"> 1 USD = 83.05 INR </span>
+      </div>
+
+      <p class="note">* Exchange rates are updated in real-time</p>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
